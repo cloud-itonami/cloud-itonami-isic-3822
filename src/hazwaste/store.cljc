@@ -10,10 +10,9 @@
   is NO field for order/payment/transport-routing — this actor tracks
   regulatory manifest and treatment state only, it never arranges or
   executes the physical transport itself."
-  (:require #?(:clj  [clojure.edn :as edn]
-               :cljs [cljs.reader :as edn])
-            [clojure.string :as str]
-            [langchain.db :as d]))
+  (:require [clojure.string :as str]
+            [langchain.db :as d]
+            [langchain-store.core :as ls]))
 
 (defprotocol Store
   (shipment [s id])
@@ -89,8 +88,12 @@
    :contract/tenant {:db/unique :db.unique/identity}
    :ledger/seq {:db/unique :db.unique/identity}})
 
-(defn- enc [v] (pr-str v))
-(defn- dec* [s] (when s (edn/read-string s)))
+;; EDN-blob codec (compound values stored as EDN strings so langchain.db
+;; doesn't expand them into sub-entities) -- the shared kotoba-lang/
+;; langchain-store seam ~190 cloud-itonami actors otherwise hand-roll
+;; identically (ADR-2607141600), not a bespoke codec for this store.
+(defn- enc [v] (ls/enc v))
+(defn- dec* [s] (ls/dec* s))
 
 (defn- shipment->tx [{:keys [manifest-id generator-id transporter-id facility-id waste-code
                               quantity-kg cross-border? chain status source]}]

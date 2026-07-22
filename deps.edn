@@ -1,6 +1,13 @@
 {:paths ["src"]
  :deps {io.github.kotoba-lang/langgraph
-        {:local/root "../../kotoba-lang/langgraph"}}
+        {:local/root "../../kotoba-lang/langgraph"}
+        ;; langchain-store: the shared langchain.db store seam (EDN-blob
+        ;; codec + identity schema + event-log read/append helpers) that
+        ;; ~190 cloud-itonami actors hand-roll (ADR-2607141600);
+        ;; hazwaste.store's DatomicStore uses it instead of its own
+        ;; enc/dec* two-liner.
+        io.github.kotoba-lang/langchain-store
+        {:local/root "../../kotoba-lang/langchain-store"}}
  :aliases
  {:dev {:override-deps
         {io.github.kotoba-lang/langchain
