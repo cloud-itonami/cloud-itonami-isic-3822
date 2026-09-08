@@ -10,7 +10,7 @@
   is NO field for order/payment/transport-routing — this actor tracks
   regulatory manifest and treatment state only, it never arranges or
   executes the physical transport itself."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [langchain.db :as d]
             [langchain-store.core :as ls]))
 

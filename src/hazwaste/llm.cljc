@@ -7,7 +7,7 @@
   `hazwaste.policy` (the HazWasteGovernor) first."
   (:require #?(:clj  [clojure.edn :as edn]
                :cljs [cljs.reader :as edn])
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [langchain.model :as model]
             [hazwaste.store :as store]))
 
