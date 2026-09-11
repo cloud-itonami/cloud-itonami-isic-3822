@@ -31,7 +31,7 @@ Convention の越境移動監督義務を反映した SOFT(常時escalate)チェ
 
 - (+) 3811/3822 の2つで「非危険物収集」と「危険物処理」という法的責任構造の
   異なる2業態を明確に分離した。
-- (+) `clojure -M:dev:test`/`clojure -M:lint` クリーン。
+- (+) `kbb -M:dev:test`/`kbb -M:lint` クリーン。
 
 ## References
 

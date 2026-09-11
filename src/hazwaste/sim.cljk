@@ -10,7 +10,7 @@
     op6  越境移動(cross-border)のマニフェスト受入              → 人間承認へ escalate → approve → commit
     op7  マニフェスト訂正申立て(どの phase でも常に人間レビュー) → escalate → approve → commit
 
-  Run: clojure -M:dev:run"
+  Run: kbb -M:dev:run"
   (:require [langgraph.graph :as g]
             [hazwaste.store :as store]
             [hazwaste.operation :as op]
