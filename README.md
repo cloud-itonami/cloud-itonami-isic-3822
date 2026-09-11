@@ -28,7 +28,7 @@ physical transport itself.
 This actor tracks manifest chain-of-custody and treatment-authorization
 state only. It never routes physical transport, never handles payment, and
 never asserts a fact without a real regulatory-provenance citation
-(`src/hazwaste/facts.cljc`: RCRA manifest system, EU Waste Shipment
+(`src/hazwaste/facts.cljk`: RCRA manifest system, EU Waste Shipment
 Regulation, Basel Convention).
 
 ## The core contract

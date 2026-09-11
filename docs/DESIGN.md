@@ -7,29 +7,29 @@
 — 出典なき受入確定/未許可の処理実行はそのまま実定法違反(EPA RCRA
 Subtitle C)につながる。
 
-## 2. OperationActor(`src/hazwaste/operation.cljc`)
+## 2. OperationActor(`src/hazwaste/operation.cljk`)
 
 `intake → advise(HazWasteTreatment-LLM) → govern(HazWasteGovernor) → decide
 → commit|hold|request-approval` の langgraph-clj StateGraph。1 run = 1 操作。
 
-## 3. HazWasteGovernor(`src/hazwaste/policy.cljc`)
+## 3. HazWasteGovernor(`src/hazwaste/policy.cljk`)
 
 8チェック(HARD: rbac・manifest-chain-of-custody-gate・
 treatment-method-authorization-gate・source-provenance-gate・
 licensed-disclosure、SOFT: 確信度フロア・cross-border-gate・
 dispute-request 無条件)。
 
-## 4. SSoT(`src/hazwaste/store.cljc`)
+## 4. SSoT(`src/hazwaste/store.cljk`)
 
 `shipments`(manifestとchain)・`facility-permits`(waste-code×method許可)・
 `treatment-records`・`contracts`。MemStore + DatomicStore、同一契約テストで
 等価性保証。
 
-## 5. Phase 0→3(`src/hazwaste/phase.cljc`)
+## 5. Phase 0→3(`src/hazwaste/phase.cljk`)
 
 `default-phase = 1`(セッション開始時点から保守的)。
 `:correction/request` はどの phase の `:auto` にも入らない。
 
 ## 6. デモ(`clojure -M:dev:run`)
 
-`src/hazwaste/sim.cljc` が7操作を通す(§sim.cljc docstring 参照)。
+`src/hazwaste/sim.cljk` が7操作を通す(§sim.cljc docstring 参照)。
