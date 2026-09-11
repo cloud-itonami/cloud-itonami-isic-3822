@@ -5,8 +5,8 @@
 ```bash
 git clone https://github.com/cloud-itonami/cloud-itonami-isic-3822
 cd cloud-itonami-isic-3822
-clojure -M:dev:test
-clojure -M:dev:run
+kbb -M:dev:test
+kbb -M:dev:run
 ```
 
 ## 2. Production Checklist
@@ -17,7 +17,7 @@ clojure -M:dev:run
 - configure Datomic Local, kotoba-server or an equivalent durable SSoT
 - configure the LLM adapter through environment variables or secret manager
 - define subscriber contract tenants/tiers and RBAC rules
-- run `clojure -M:dev:test` and `clojure -M:lint`
+- run `kbb -M:dev:test` and `kbb -M:lint`
 - verify audit-ledger export
 - document backup/restore and incident response
 - get written legal review for the jurisdictions you serve (RCRA/EU Waste

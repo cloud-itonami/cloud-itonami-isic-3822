@@ -37,8 +37,8 @@
   Phase 0->3 staged-autonomy gate (hazwaste.phase), default-phase=1 from
   initial implementation, that can only narrow — never widen — what the
   governor already allows. 28 tests / 98 assertions green
-  (`clojure -M:dev:test`), clj-kondo 0 errors/warnings
-  (`clojure -M:lint`), demo runnable end-to-end (`clojure -M:dev:run`).
+  (`kbb -M:dev:test`), clj-kondo 0 errors/warnings
+  (`kbb -M:lint`), demo runnable end-to-end (`kbb -M:dev:run`).
   Deliberately distinct from cloud-itonami-isic-3811 (non-hazardous
   waste collection): 3811 dispatches non-hazardous streams, this actor
   treats/disposes hazardous waste under RCRA Subtitle C / the EU Waste

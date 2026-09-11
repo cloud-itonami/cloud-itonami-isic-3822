@@ -30,6 +30,6 @@ dispute-request 無条件)。
 `default-phase = 1`(セッション開始時点から保守的)。
 `:correction/request` はどの phase の `:auto` にも入らない。
 
-## 6. デモ(`clojure -M:dev:run`)
+## 6. デモ(`kbb -M:dev:run`)
 
 `src/hazwaste/sim.cljk` が7操作を通す(§sim.cljc docstring 参照)。
