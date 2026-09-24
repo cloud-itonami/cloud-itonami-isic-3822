@@ -23,7 +23,7 @@
        regardless of confidence.
     8. dispute-request — SOFT, unconditional. A manifest correction dispute
        never auto-resolves, at any confidence, any phase."
-  (:require [clojure.set :as set]
+  (:require [kotoba.lang.coll :as set]
             [hazwaste.facts :as facts]
             [hazwaste.store :as store]))
 
