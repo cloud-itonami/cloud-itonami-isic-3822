@@ -1,5 +1,5 @@
 (ns hazwaste.store-contract-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [hazwaste.store :as store]))
 
 (defn- backends []
