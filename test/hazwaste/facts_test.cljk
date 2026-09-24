@@ -1,5 +1,5 @@
 (ns hazwaste.facts-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [hazwaste.facts :as facts]))
 
 (deftest catalog-entries-are-well-formed

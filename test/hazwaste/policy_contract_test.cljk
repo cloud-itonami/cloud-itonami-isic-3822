@@ -3,7 +3,7 @@
   HazWasteTreatment-LLM never receives/executes/discloses/resolves a record
   the HazWasteGovernor would reject, and every decision leaves exactly one
   ledger fact."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [langgraph.graph :as g]
             [hazwaste.store :as store]
             [hazwaste.operation :as op]))

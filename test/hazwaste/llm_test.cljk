@@ -1,5 +1,5 @@
 (ns hazwaste.llm-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [hazwaste.store :as store]
             [hazwaste.llm :as llm]))
 
